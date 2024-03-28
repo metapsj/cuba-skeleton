@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+$(brew --prefix sqlite)/bin/sqlite3 $1
+

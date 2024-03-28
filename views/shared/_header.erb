@@ -1,0 +1,35 @@
+<!--
+  header
+    navigation
+    hero
+ -->
+<header>
+  <div class="bg-indigo-700">
+    <!-- navigation -->
+    <%= partial "shared/_navigation" %>
+    <!-- ./navigation -->
+  </div>
+
+  <div>
+    <!-- hero -->
+    <% 
+      site = {
+        address: 'address',
+        city: 'city',
+        state: 'state',
+        zip: 'zip',
+        phone: 'phone'
+      }
+    %>
+    <%= partial(
+        "shared/_hero", 
+        title: 'title',
+        subtitle: 'subtitle',
+        byline: 'byline',
+        hours: 'hours',
+        site: site
+      )
+    %>
+    <!-- ./hero -->
+  </div>
+</header>

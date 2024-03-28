@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pickle Rally">
+
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="/css/app.css">
+
+  <title>Pickle Rally</title>
+</head>
+
+<body>
+  <!-- header -->
+  <%# partial "shared/_header" %>
+  <!-- ./header -->
+
+  <!-- main -->
+  <%= content %>
+  <!-- ./main -->
+
+  <!-- footer -->
+  <%# partial "shared/_footer" %>
+  <!-- ./footer -->
+
+  <!-- scripts -->
+  <!-- 
+  <script type="text/javascript" src="js/leaflet-map.js"></script>
+  -->
+  <!-- ./scripts -->
+</body>
+
+</html>
+
