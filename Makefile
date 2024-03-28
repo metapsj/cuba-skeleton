@@ -1,4 +1,3 @@
-
 #
 # default
 #
@@ -80,17 +79,19 @@ gen/route:
 #
 # database
 #
+database = stub.db
+
 .PHONY: db/create
 db/create:
-	touch db/picklerally.db
+	touch db/$(database)
 
 .PHONY: db/drop
 db/drop:
-	rm db/picklerally.db
+	rm db/$(database)
 
 .PHONY: db/migrate
 db/migrate:
-	sequel -m db/migrate sqlite://db/picklerally.db
+	sequel -m db/migrate sqlite://db/$(database)
 
 .PHONY: db/seed
 db/seed:
