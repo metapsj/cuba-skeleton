@@ -30,51 +30,17 @@ Cuba.define do
 
   # root
   on root do
-    render 'index'
-  end
-
-  # users
-  on "users" do
-    run Routes::User
-  end
-
-  # parties
-  on "parties" do
-    run Routes::Party
-  end
-
-  # events
-  on "events" do
-    run Routes::Event
-  end
-
-  # sign-up
-  on "signup" do
-    run Routes::Signup
-  end
-
-  # sign-in
-  on 'signin' do
-    run Routes::Signin
-  end
-
-  # sign-out
-  on "signout" do
-    run Routes::Signout
+    # render 'index'
+    res.write "#index"
   end
 
   # on authenticated(Models::User) do
   #   run Routes::User
   # end
 
-  # on 'admin' do
-  #   run Routes::Admin
-  #   res.write "Routes::Admin"
-  # end
-
+  # default
   on default do
-    # run Routes::Guest
-    res.write "Routes::App #default"
+    res.write "#default"
   end
 end
 
